@@ -1,0 +1,167 @@
+:root{
+    --color-b: black;
+    --color-w: white;
+    --color-g: #a8a8a8;
+  }
+  *{
+    font-family: 'Dosis', 'san serif';
+    accent-color: var(--color-b)
+  }
+  html, body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  body{
+    margin: 0;
+    scroll-snap-type: y mandatory;
+  }
+  body::-webkit-scrollbar{
+    width: 0.5rem;
+  }
+  /* body::-webkit-scrollbar-track{
+    width: 0.5rem;
+  } */
+  body::-webkit-scrollbar-track{
+    background: var(--color-g);
+  }
+  body::-webkit-scrollbar-thumb{
+    background: var(--color-w);
+    /* border-radius: 10px */
+  }
+  .special-text{
+    font-family: 'Long Cang', 'san serif';
+    /* font-size: 1.5rem */
+  }
+  .bold{
+    font-weight: 900;
+    color: var(--color-b)
+  }
+  .underline{
+    text-decoration: underline;
+  }
+  svg{
+    width: 50px;
+  }
+  header,form{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    scroll-snap-align: start;
+  }
+  header{
+    margin-bottom: 0;
+  }
+  header h1{
+    font-family: 'Long Cang', cursive;
+    margin-bottom: 0;
+    font-size: 6vw;
+    text-align: left;
+    max-width: 50ch;
+    margin: 0 0 0 1.5rem;
+  }
+  /* media query for the header h1 */
+  @media only screen and (max-width: 425px) {
+    header h1{
+      font-size: 9vw;
+    }
+  }
+  header svg{
+    position: fixed;
+    width: 100vw;
+    z-index: -1;
+  }
+  @media only screen and (max-width: 425px) {
+    header svg{
+      position: static;
+    }
+  }
+  p#description{
+    font-size: 1.5vw;
+    margin: 1rem 0 0 1.5rem;
+    /* text-align: center; */
+  }
+  @media only screen and (max-width: 425px) {
+    p#description{
+      font-size: 1.5rem;
+      margin-top: 0.5rem
+    }
+  }
+  @media only screen and (min-width:426px) and (max-width:1024px){
+    p#description{
+      font-size: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  header a{
+    font-style: italic;
+    transition: 300ms
+  }
+  header a:hover{
+    color: var(--color-w);
+    background-color: var(--color-b);
+  }
+  @media only screen and (max-width: 425px) {
+    header a{
+      font-size: 2rem;
+    }
+  }
+  form{
+    background: var(--color-g);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0; 
+    justify-content: center;
+    align-items: center;
+  }
+  form::-webkit-scrollbar{
+    display: none;
+  }
+  @media only screen and (max-width: 425px) {
+    form{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    }
+  }
+  fieldset{
+    width: 50vw;
+    background: var(--color-w);
+    /* aspect-ratio:  */
+    margin: 0;
+    scroll-snap-align: center;
+  }
+  @media only screen and (max-width: 425px) {
+    fieldset{
+    width: 50vw;
+    margin: 0 50vh 0 50vh;
+    }
+  }
+  legend{
+    font-family: 'Long Cang', cursive;
+    font-size: 2.5rem;
+    font-weight: 900;  
+  }
+  @media only screen and (max-width: 425px) {
+    legend{
+      /* font-family: 'Long Cang', cursive; */
+      /* font-size: 1rem; */
+      line-height: 1.75rem;  
+    }
+  }
+  div.details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+  }
+  div.details input{
+    width: 20rem;
+  }
